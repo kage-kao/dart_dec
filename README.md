@@ -6,12 +6,6 @@
 
 **Самый быстрый, модульный и pipeline-ready инструмент для реверс-инжиниринга Flutter/Dart AOT приложений**
 
-[![Rust](https://img.shields.io/badge/Rust-1.77+-orange?logo=rust)](https://www.rust-lang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/Tests-98%20passed-brightgreen)]()
-[![Crates](https://img.shields.io/badge/Crates-13-blueviolet)]()
-[![Lines](https://img.shields.io/badge/Lines-10.4k-informational)]()
-
 [Быстрый старт](#-быстрый-старт) · [Возможности](#-возможности) · [CLI](#-cli-справка) · [Python API](#-python-api) · [Плагины](#-плагины) · [Сборка](#-сборка-из-исходников)
 
 </div>
