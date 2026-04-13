@@ -1,0 +1,21 @@
+[package]
+name = "dart_dec_snapshot"
+version.workspace = true
+edition.workspace = true
+description = "AOT Snapshot parsing and object pool recovery"
+
+[dependencies]
+dart_dec_core = { path = "../dart_dec_core" }
+dart_dec_profiles = { path = "../dart_dec_profiles" }
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+byteorder.workspace = true
+ahash.workspace = true
+memchr.workspace = true
+bitflags.workspace = true
+bumpalo.workspace = true
+
+[dev-dependencies]
+insta.workspace = true

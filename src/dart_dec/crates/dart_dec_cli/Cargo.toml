@@ -1,0 +1,42 @@
+[package]
+name = "dart_dec_cli"
+version.workspace = true
+edition.workspace = true
+description = "CLI entry point for dart_dec"
+
+[[bin]]
+name = "dart_dec"
+path = "src/main.rs"
+
+[dependencies]
+dart_dec_core = { path = "../dart_dec_core" }
+dart_dec_snapshot = { path = "../dart_dec_snapshot" }
+dart_dec_profiles = { path = "../dart_dec_profiles" }
+dart_dec_disasm = { path = "../dart_dec_disasm" }
+dart_dec_lifter = { path = "../dart_dec_lifter" }
+dart_dec_graph = { path = "../dart_dec_graph" }
+dart_dec_patterns = { path = "../dart_dec_patterns" }
+dart_dec_deobf = { path = "../dart_dec_deobf" }
+dart_dec_output = { path = "../dart_dec_output" }
+dart_dec_scan = { path = "../dart_dec_scan" }
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+miette.workspace = true
+anyhow.workspace = true
+indicatif.workspace = true
+owo-colors.workspace = true
+rayon.workspace = true
+bumpalo.workspace = true
+serde_json.workspace = true
+ctrlc.workspace = true
+toml.workspace = true
+serde.workspace = true
+regex.workspace = true
+
+[[bench]]
+name = "benchmark"
+harness = false
+
+[dev-dependencies]
+criterion.workspace = true
