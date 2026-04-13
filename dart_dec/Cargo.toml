@@ -1,0 +1,99 @@
+[workspace]
+members = [
+    "crates/dart_dec_core",
+    "crates/dart_dec_snapshot",
+    "crates/dart_dec_profiles",
+    "crates/dart_dec_disasm",
+    "crates/dart_dec_lifter",
+    "crates/dart_dec_graph",
+    "crates/dart_dec_patterns",
+    "crates/dart_dec_deobf",
+    "crates/dart_dec_output",
+    "crates/dart_dec_scan",
+    "crates/dart_dec_cli",
+    "crates/dart_dec_lib",
+    "crates/dart_dec_python",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["dart_dec contributors"]
+description = "Dart AOT Headless Decompiler"
+
+[workspace.dependencies]
+# Binary parsing
+memmap2 = "0.9"
+goblin = "0.9"
+
+# Disassembly
+capstone = "0.12"
+
+# Graphs
+petgraph = "0.6"
+
+# Parallelism & allocation
+rayon = "1.10"
+bumpalo = { version = "3.16", features = ["collections"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+rusqlite = { version = "0.31", features = ["bundled"] }
+
+# CLI
+clap = { version = "4.5", features = ["derive", "env"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Search
+memchr = "2.7"
+
+# Hashing
+ahash = "0.8"
+
+# Progress & colors
+indicatif = "0.17"
+owo-colors = "4.0"
+
+# Error handling
+thiserror = "2.0"
+miette = { version = "7.0", features = ["fancy"] }
+anyhow = "1.0"
+
+# Testing
+criterion = { version = "0.5", features = ["html_reports"] }
+insta = { version = "1.38", features = ["json"] }
+
+# YARA
+# yara = "0.28"
+
+# Misc
+toml = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+sha2 = "0.10"
+hex = "0.4"
+regex = "1.10"
+once_cell = "1.19"
+ctrlc = "3.4"
+byteorder = "1.5"
+bitflags = "2.5"
+num-traits = "0.2"
+strum = { version = "0.26", features = ["derive"] }
+uuid = { version = "1.8", features = ["v4"] }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.bench]
+inherits = "release"
+debug = true

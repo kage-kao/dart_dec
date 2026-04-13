@@ -1,0 +1,26 @@
+[package]
+name = "dart_dec_output"
+version.workspace = true
+edition.workspace = true
+description = "Output formats: JSON, SQLite, Dart codegen, SARIF, Protobuf, CSV"
+
+[dependencies]
+dart_dec_core = { path = "../dart_dec_core" }
+dart_dec_snapshot = { path = "../dart_dec_snapshot" }
+dart_dec_graph = { path = "../dart_dec_graph" }
+dart_dec_lifter = { path = "../dart_dec_lifter" }
+dart_dec_patterns = { path = "../dart_dec_patterns" }
+dart_dec_scan = { path = "../dart_dec_scan" }
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rusqlite.workspace = true
+chrono.workspace = true
+sha2.workspace = true
+hex.workspace = true
+uuid.workspace = true
+anyhow.workspace = true
+
+[dev-dependencies]
+insta.workspace = true

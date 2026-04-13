@@ -1,0 +1,15 @@
+[package]
+name = "dart_dec_disasm"
+version.workspace = true
+edition.workspace = true
+description = "Multi-architecture disassembler (ARM64, ARM32, x86_64)"
+
+[dependencies]
+dart_dec_core = { path = "../dart_dec_core" }
+capstone.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+insta.workspace = true
