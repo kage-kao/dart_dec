@@ -1,0 +1,14 @@
+[defaults]
+format = "json"
+arch = "arm64"
+parallel = true
+log_level = "info"
+
+[scan]
+# yara_rules = "./rules/"
+detect_secrets = true
+detect_weak_crypto = true
+
+[output]
+sqlite_path = "./output/dump.db"
+dart_output_dir = "./output/dart/"

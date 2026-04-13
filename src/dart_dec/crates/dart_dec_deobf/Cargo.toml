@@ -1,0 +1,19 @@
+[package]
+name = "dart_dec_deobf"
+version.workspace = true
+edition.workspace = true
+description = "Deobfuscation and symbol recovery"
+
+[dependencies]
+dart_dec_core = { path = "../dart_dec_core" }
+dart_dec_snapshot = { path = "../dart_dec_snapshot" }
+dart_dec_graph = { path = "../dart_dec_graph" }
+dart_dec_lifter = { path = "../dart_dec_lifter" }
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+ahash.workspace = true
+regex.workspace = true
+
+[dev-dependencies]
+insta.workspace = true
