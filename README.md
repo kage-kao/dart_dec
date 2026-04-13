@@ -1,7 +1,3 @@
-<div align="center">
-
-# dart_dec
-
 ### Dart AOT Headless Decompiler
 
 **Самый быстрый, модульный и pipeline-ready инструмент для реверс-инжиниринга Flutter/Dart AOT приложений**
