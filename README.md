@@ -2,7 +2,7 @@
 
 **Самый быстрый, модульный и pipeline-ready инструмент для реверс-инжиниринга Flutter/Dart AOT приложений**
 
-</div>
+> Поддержать проект: https://yoomoney.ru/fundraise/1CV7BFDQ964.250923
 
 ---
 
